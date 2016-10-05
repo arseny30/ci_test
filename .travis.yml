@@ -1,3 +1,6 @@
+sudo: requied
+dist: thrusty
+
 language: cpp
 
 before_install:
