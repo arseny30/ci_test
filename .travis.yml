@@ -1,19 +1,13 @@
-dist: precise
+sudo: requied
+dist: thrusty
 language: cpp
 
 before_install:
-  - sudo apt-get -qq update
+  #- sudo apt-get -qq update
   #- sudo apt-get install -y libxml2-dev
-
-addons:
-  apt:
-    packages:
-    - cmake
-    - time
 
 compiler:
   - clang
-  - gcc
 
 script:
   - mkdir build
