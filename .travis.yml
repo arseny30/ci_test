@@ -34,6 +34,5 @@ compiler:
 script:
   - mkdir build
   - cd build
-  - export CXXFLAGS="-stdlib=libc++"
   - cmake .. && make -j3 VERBOSE=1
   - ./main
