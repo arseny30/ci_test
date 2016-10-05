@@ -12,5 +12,6 @@ compiler:
 script:
   - mkdir build
   - cd build
-  - cmake .. && make -j3
+  - export CXXFLAGS="-stdlib=libc++"
+  - cmake .. && make -j3 VERBOSE=1
   - ./main
