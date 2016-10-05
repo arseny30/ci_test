@@ -30,6 +30,8 @@ addons:
       #- gcc-4.9
       #- g++-4.9
       - clang-3.7
+      - libc++-dev 
+      - libc++abi-dev
 
 compiler:
   - clang
@@ -37,5 +39,6 @@ compiler:
 script:
   - mkdir build
   - cd build
+  - export CXXFLAGS="-stdlib=libc++"
   - cmake .. && make -j3 VERBOSE=1
   - ./main
