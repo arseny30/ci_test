@@ -5,7 +5,7 @@ language: cpp
 
 before_install:
   - sudo apt-get -qq update
-  - brew install openssl
+  #- brew install openssl
   #- sudo apt-get install -y libxml2-dev
  
 install:
@@ -34,6 +34,7 @@ addons:
       - libc++-dev 
       - libc++abi-dev
       - gperf
+      - clang-tidy-3.8
 
 compiler:
   - clang
@@ -41,7 +42,7 @@ compiler:
 
 os:
   - linux
-  - osx
+  #- osx
 
 script:
   - mkdir build
