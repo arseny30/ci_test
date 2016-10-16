@@ -4,14 +4,15 @@ dist: thrusty
 language: android
 
 matrix:
-  - os: linux
-    compiler: "xxx-gcc"
-    env: CXX="g++-5" CC="gcc-5"
-  - os: linux
-    compiler: "xxx-clang"
-    env: CXX="clang++-3.7" CC="clang-3.7"
-  - os: osx
-    compiler: "xxx-clang"
+  include:
+    - os: linux
+      compiler: "xxx-gcc"
+      env: CXX="g++-5" CC="gcc-5"
+    - os: linux
+      compiler: "xxx-clang"
+      env: CXX="clang++-3.7" CC="clang-3.7"
+    - os: osx
+      compiler: "xxx-clang"
 
 before_install:
   - sudo apt-get -qq update
