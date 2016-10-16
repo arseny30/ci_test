@@ -1,7 +1,7 @@
 sudo: requied
 dist: thrusty
 
-language: cpp
+language: android
 
 before_install:
   - sudo apt-get -qq update
@@ -48,5 +48,5 @@ script:
   - mkdir build
   - cd build
   #- export CXXFLAGS="-stdlib=libc++"
-  - cmake .. && make -j3 VERBOSE=1
+  - cmake ../cpp_test/ && make -j3 VERBOSE=1
   - ./main
